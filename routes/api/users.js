@@ -23,32 +23,33 @@ router.post('/create',
         try {
             let user = await User.findOne({ email: req.body.email });
             if (user) {
-                return res.status(400).json({ error: "User already exists with this email"});
+                return res.status(400).json({ errors: [{ msg: "User already exists with this email" }] });
             }
+
+            const firstName = req.body.firstName;
+            const lastName = req.body.lastName;
+            const email = req.body.email;
+            const displayName = req.body.displayName;
+            const password = req.body.password;
+            
+
+            const newUser = new User({
+                firstName,
+                lastName,
+                email,
+                displayName,
+                password
+            });
+
+            const salt = await bcrypt.genSalt();
+            newUser.password = await bcrypt.hash(password, salt);
+            await newUser.save()
+                .then(() => res.json('User added!'))
+                .catch(err => res.status(400).json('Error: ' + err));
         } catch(err) {
-            console.log('No existing user found');
+            console.log(err.message);
+            res.status(500).send("Server Error");
         }
-
-        const firstName = req.body.firstName;
-        const lastName = req.body.lastName;
-        const email = req.body.email;
-        const displayName = req.body.displayName;
-        const password = req.body.password;
-        
-
-        const newUser = new User({
-            firstName,
-            lastName,
-            email,
-            displayName,
-            password
-        });
-
-        const salt = await bcrypt.genSalt();
-        newUser.password = await bcrypt.hash(password, salt);
-        await newUser.save()
-            .then(() => res.json('User added!'))
-            .catch(err => res.status(400).json('Error: ' + err));
 
 
         
