@@ -1,0 +1,16 @@
+# Node Modules (WAY too big)
+node_modules/
+
+
+# Mac Dev Files
+.DS_Store
+
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+
+# Sensitive Environment Data
+.env
