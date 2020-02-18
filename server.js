@@ -6,7 +6,7 @@ const app = express();
 require('dotenv').config({ debug: process.env.DEBUG });
 
 // PORT Settings
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 5000;
 
 
 // Database Connection Setup
@@ -15,8 +15,6 @@ connectDB();
 // Middleware initialization
 app.use(express.json({ extended: false }));
 
-
-app.get('/', (req, res) => res.send('API Running'));
 
 // Necessary API Routes
 app.use('/api/auth', require('./routes/api/auth'));
