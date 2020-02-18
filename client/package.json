@@ -22,9 +22,7 @@
     "react-scripts": "3.3.1",
     "babel-jest": "^24.9.0"
   },
-  "devDependencies": {
-    "react-scripts": "3.3.1"
-  },
+  "devDependencies": {},
   "browserslist": {
     "production": [
       ">0.2%",
