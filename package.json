@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "engines": {
+    "node": "13.8.0"
+  },
   "scripts": {
     "test": "cross-env NODE_ENV=development jest",
     "server": "nodemon",
