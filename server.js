@@ -15,6 +15,8 @@ connectDB();
 // Middleware initialization
 app.use(express.json({ extended: false }));
 
+app.use('/', express.static(path.join(__dirname, '/client/build')));
+
 
 // Necessary API Routes
 app.use('/api/auth', require('./routes/api/auth'));
