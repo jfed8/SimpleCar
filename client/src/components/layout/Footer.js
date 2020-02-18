@@ -22,7 +22,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logoutUser }) => {
 
 
     return (
-        <nav className='navbar bg-primary'>
+        <nav className='navbar bg-dark'>
             <h1>
                 <Link to='/'> <i className='fas fa-book-reader'></i> SimpleCar</Link>
             </h1>
@@ -31,14 +31,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logoutUser }) => {
     )
 }
 
-Navbar.propTypes = {
-    logoutUser: PropTypes.func.isRequired,
-    auth: PropTypes.object.isRequired
-}
-
-const mapStateToProps = state => ({
-    auth: state.auth
-})
 
 
-export default connect(mapStateToProps, {logoutUser})(Navbar);
+
+export default Footer;
