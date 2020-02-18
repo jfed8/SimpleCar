@@ -1,13 +1,20 @@
 {
-  "name": "SimpleCar",
+  "name": "simplecar",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon"
+    "test": "cross-env NODE_ENV=development jest",
+    "server": "nodemon",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jfed8/SimpleCar.git"
+  },
   "author": "Jaden Feddock <jaden@simplecar.com> (https://www.simplecar.com)",
   "license": "MIT",
   "dependencies": {

@@ -24,4 +24,14 @@ app.use('/api/users', require('./routes/api/users'));
 app.use('/api/cars', require('./routes/api/cars'));
 
 
+// PRODUCTION <-- Careful Here!
+if (process.emitWarning.NODE_ENV === "production") {
+    app.use(express.static('client/build'));
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    });
+}
+
+
 app.listen(PORT, () => console.log(`Server running on port: ${PORT}`));
