@@ -15,8 +15,6 @@ connectDB();
 // Middleware initialization
 app.use(express.json({ extended: false }));
 
-app.use('/', express.static(path.join(__dirname, '/client/build')));
-
 
 // Necessary API Routes
 app.use('/api/auth', require('./routes/api/auth'));
@@ -25,7 +23,7 @@ app.use('/api/cars', require('./routes/api/cars'));
 
 
 // PRODUCTION <-- Careful Here!
-if (process.emitWarning.NODE_ENV === "production") {
+if (process.env.NODE_ENV === "production") {
     app.use(express.static('client/build'));
 
     app.get('*', (req, res) => {
