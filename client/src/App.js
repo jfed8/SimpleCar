@@ -9,6 +9,10 @@ import Navbar from './components/layout/Navbar';
 import Home from './components/layout/Home';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
+import Welcome from './components/main/Welcome';
+import NewListing from './components/listing/NewListing';
+
+
 import setAuthToken from './helpers/setAuthToken';
 import { loadUser } from './actions/auth';
 
@@ -34,6 +38,8 @@ const App = () => {
                     <Switch>
                         <Route exact path='/register' component={ Register } />
                         <Route exact path='/login' component={ Login } />
+                        <Route exact path='/welcome' component={ Welcome } />
+                        <Route exact path='/newlisting' component={ NewListing } />
                     </Switch>
                 </section>
             </div>

@@ -222,9 +222,22 @@ button {
   position: fixed;
   z-index: 1;
   width: 100%;
-  top: 0;
-  border-bottom: solid 1px var(--primary-color);
+  top: 2%;
+  /* border-bottom: solid 1px var(--primary-color); */
   opacity: 0.9;
+}
+
+.navbar-brand {
+  position: absolute;
+  left: 50%;
+  transform:translateX(-50%) !important;  /* 50% of your logo width */
+  display: block;
+}
+
+.navbar-brand img {
+  
+  max-width: 50vw;
+  max-height: 100px;
 }
 
 .navbar ul {
@@ -232,13 +245,14 @@ button {
 }
 
 .navbar a {
-  color: #fff;
+  color: var(--primary-color);
   padding: 0.45rem;
   margin: 0 0.25rem;
 }
 
 .navbar a:hover {
-  color: var(--primary-color);
+  color: var(--dark-color);
+  text-decoration: none;
 }
 
 .navbar .welcome span {

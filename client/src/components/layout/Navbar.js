@@ -5,11 +5,12 @@ import PropTypes from 'prop-types';
 import { logoutUser } from '../../actions/auth';
 
 
-const Navbar = ({ auth: { isAuthenticated, loading }, logoutUser }) => {
+const Navbar = ({ auth: { isAuthenticated, loading, user }, logoutUser }) => {
     
     const authLinks = (
         <ul>
-            <li><a onClick={ logoutUser } href="#!">Logout</a></li>
+            <li>Welcome {user ? user.first_name : "User"}!</li>
+            <li> <a onClick={ logoutUser } href="/#!">Logout</a></li>
         </ul>
     );
 
@@ -22,10 +23,8 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logoutUser }) => {
 
 
     return (
-        <nav className='navbar bg-primary'>
-            <h1>
-                <Link to='/'> <i className='fas fa-book-reader'></i> SimpleCar</Link>
-            </h1>
+        <nav className='navbar'>
+            <Link to='/' class="navbar-brand" ><img src={require('./../../assets/SimpleCar-Logo.jpg')} /></Link>
             { !loading && (<div>{ isAuthenticated ? authLinks : guestLinks }</div>) }
         </nav>
     )

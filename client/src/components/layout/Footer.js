@@ -5,20 +5,7 @@ import PropTypes from 'prop-types';
 import { logoutUser } from '../../actions/auth';
 
 
-const Navbar = ({ auth: { isAuthenticated, loading }, logoutUser }) => {
-    
-    const authLinks = (
-        <ul>
-            <li><a onClick={ logoutUser } href="#!">Logout</a></li>
-        </ul>
-    );
-
-    const guestLinks = (
-        <ul>
-            <li><Link to='/register'>Register</Link></li>
-            <li><Link to='/login'>Login</Link></li>
-        </ul>
-    )
+const Footer = ({ auth: { isAuthenticated, loading }, logoutUser }) => {
 
 
     return (
