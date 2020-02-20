@@ -15,7 +15,7 @@ const Welcome = ({ isAuthenticated }) => {
         <div class="container">
             <div class="row">
                 <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-                    <Link to="/newlisting" class="btn btn-lg btn-primary btn-block text-uppercase">List a Car</Link>
+                    <Link to="/newlisting" class="btn btn-lg btn-primary form-style-btn btn-block text-uppercase">List a Car</Link>
                 </div>
             </div>
         </div>

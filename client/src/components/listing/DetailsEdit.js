@@ -16,7 +16,7 @@ const DetailsEdit = (props) => {
                         <hr class="my-4" />
                         <p>
 
-                            VIN Decoded!
+                            Edit Details
 
                         </p>
                     </div>

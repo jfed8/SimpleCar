@@ -3,18 +3,17 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
     return (
-        <section className='home'>
-            <div className='dark-overlay'>
-                <div className='home-inner'>
-                    <h1 className='x1'>SimpleCar</h1>
-                    <p className="cta">Sell Your Car!</p>
-                    <div className='buttons'>
-                        <Link to='/register' className='btn btn-primary'>Register</Link>
-                        <Link to='/login' className='btn btn-primary'>Login</Link>
-                    </div>
+        <div className="container">
+            <br />
+            <br />
+            <br />
+            <br />
+            <div className="row">
+                <div className="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                    <Link to="/newlisting" className="btn btn-lg btn-primary form-style-btn btn-block text-uppercase">List a Car</Link>
                 </div>
             </div>
-        </section>
+        </div>
     )
 }
 

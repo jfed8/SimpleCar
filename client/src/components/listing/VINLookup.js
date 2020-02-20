@@ -1,29 +1,31 @@
 import React, { useState } from 'react';
 
 const VINLookup = (props) => {
-    const { values, vin, nextStep, handleChange } = props;
+    const { values, nextStep, setValues, handleChange, step } = props;
 
-    // onChange Handler
-    const onChange = e => handleChange({
-        ...values,
-        [e.target.name]: e.target.value
-    });
+
+    const onChange = e => {
+        setValues({
+            ...values,
+            vin: e.target.value
+        })
+    }
 
     return (
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-                    <div class="card card-signin my-5">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Enter VIN</h5>
-                        <form class="form-signin" onSubmit={nextStep}>
-                            <div class="form-label-group">
-                                <input type="text" id="inputVIN" class="form-control" placeholder="VIN" name="vin" onChange={e => onChange(e)} required />
-                                <label for="inputVIN">VIN</label>
+        <div className="container">
+            <div className="row">
+                <div className="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                    <div className="card card-signin my-5">
+                    <div className="card-body">
+                        <h5 className="card-title text-center">Enter VIN</h5>
+                        <form className="form-signin" onSubmit={nextStep}>
+                            <div className="form-label-group">
+                                <input type="text" id="inputVIN" className="form-control" placeholder="VIN" name="vin" onChange={e => onChange(e)} defaultValue={values.vin} required />
+                                <label htmlFor="inputVIN">VIN</label>
                             </div>
                             
-                            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">List My Car!</button>
-                            <hr class="my-4" />
+                            <button className="btn btn-lg btn-primary btn-block text-uppercase" type="submit">List My Car!</button>
+                            <hr className="my-4" />
                             <p className="m">
                                 
                             </p>

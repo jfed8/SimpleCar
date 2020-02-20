@@ -6,6 +6,7 @@ import store from './store'
 
 // Import Components
 import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
 import Home from './components/layout/Home';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
@@ -42,6 +43,7 @@ const App = () => {
                         <Route exact path='/newlisting' component={ NewListing } />
                     </Switch>
                 </section>
+                <Footer />
             </div>
         </Router>
         </Provider>

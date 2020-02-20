@@ -9,7 +9,7 @@ const Navbar = ({ auth: { isAuthenticated, loading, user }, logoutUser }) => {
     
     const authLinks = (
         <ul>
-            <li>Welcome {user ? user.first_name : "User"}!</li>
+            <li>Welcome{user ? " " + user.first_name : ""}!</li>
             <li> <a onClick={ logoutUser } href="/#!">Logout</a></li>
         </ul>
     );
@@ -24,7 +24,7 @@ const Navbar = ({ auth: { isAuthenticated, loading, user }, logoutUser }) => {
 
     return (
         <nav className='navbar'>
-            <Link to='/' class="navbar-brand" ><img src={require('./../../assets/SimpleCar-Logo.jpg')} /></Link>
+            <Link to='/' className="navbar-brand" ><img src={require('./../../assets/SimpleCar-Logo.jpg')} /></Link>
             { !loading && (<div>{ isAuthenticated ? authLinks : guestLinks }</div>) }
         </nav>
     )
