@@ -20,6 +20,7 @@ app.use(express.json({ extended: false }));
 app.use('/api/auth', require('./routes/api/auth'));
 app.use('/api/users', require('./routes/api/users'));
 app.use('/api/listings', require('./routes/api/listings'));
+app.use('/api/search', require('./routes/api/search'));
 
 
 // PRODUCTION <-- Careful Here!

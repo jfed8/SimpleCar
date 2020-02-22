@@ -16,6 +16,7 @@ import NewListing from './components/listing/NewListing';
 
 import setAuthToken from './helpers/setAuthToken';
 import { loadUser } from './actions/auth';
+import MainSearch from './components/search/MainSearch';
 
 
 // Set Authorization Token
@@ -41,6 +42,7 @@ const App = () => {
                         <Route exact path='/login' component={ Login } />
                         <Route exact path='/welcome' component={ Welcome } />
                         <Route exact path='/newlisting' component={ NewListing } />
+                        <Route exact path='/search' component={ MainSearch } />
                     </Switch>
                 </section>
                 <Footer />

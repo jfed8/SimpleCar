@@ -46,5 +46,7 @@ const ListingSchema = new mongoose.Schema({
     description: String
 })
 
+ListingSchema.index({'$**': 'text'});
+
 
 module.exports = Listing = mongoose.model('Listing', ListingSchema);
