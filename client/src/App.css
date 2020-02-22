@@ -223,6 +223,11 @@ button {
   background: var(--light-color);
 }
 
+.search-result-card {
+  width: 17rem;
+  display: inline-block;
+}
+
 footer {
   position: relative;
   bottom: 0;
