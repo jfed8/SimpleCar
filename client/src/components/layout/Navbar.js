@@ -24,7 +24,7 @@ const Navbar = ({ auth: { isAuthenticated, loading, user }, logoutUser }) => {
 
     return (
         <nav className='navbar'>
-            <Link to='/' className="navbar-brand" ><img src={require('./../../assets/SimpleCar-Logo.jpg')} /></Link>
+            <Link to='/' className="navbar-brand" ><img src={require('./../../assets/SimpleCarLogo-Full.jpeg')} /></Link>
             { !loading && (<div>{ isAuthenticated ? authLinks : guestLinks }</div>) }
         </nav>
     )

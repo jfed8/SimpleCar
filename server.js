@@ -19,7 +19,7 @@ app.use(express.json({ extended: false }));
 // Necessary API Routes
 app.use('/api/auth', require('./routes/api/auth'));
 app.use('/api/users', require('./routes/api/users'));
-app.use('/api/cars', require('./routes/api/cars'));
+app.use('/api/listings', require('./routes/api/listings'));
 
 
 // PRODUCTION <-- Careful Here!

@@ -224,7 +224,7 @@ button {
 }
 
 footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
   text-align: center;
   width:100%;
@@ -251,9 +251,9 @@ footer {
 }
 
 .navbar-brand img {
-  
   max-width: 50vw;
-  max-height: 100px;
+  max-height: 150px;
+  margin-top: 30px;
 }
 
 .navbar ul {

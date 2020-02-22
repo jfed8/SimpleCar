@@ -48,23 +48,23 @@ const Register = ({ register, isAuthenticated }) => {
                         <form class="form-signin" onSubmit={e => onSubmit(e)}>
                             <div className="form-label-group">
                                 <input type='text' id="inputFirstName" class="form-control" placeholder="First Name" name="first_name" value={first_name} onChange={e => onChange(e)} required />
-                                <label for="inputFirstName">First Name</label>
+                                <label htmlFor="inputFirstName">First Name</label>
                             </div>
                             <div className="form-label-group">
                                 <input type='text' id="inputLastName" class="form-control" placeholder="Last Name" name="last_name" value={last_name} onChange={e => onChange(e)} required />
-                                <label for="inputLastName">Last Name</label>
+                                <label htmlFor="inputLastName">Last Name</label>
                             </div>
                             <div className="form-label-group">
                                 <input type='email' id="inputEmail" class="form-control" placeholder="Email" name="email" value={email} onChange={e => onChange(e)} required />
-                                <label for="inputEmail">Email address</label>
+                                <label htmlFor="inputEmail">Email address</label>
                             </div>
                             <div className="form-label-group">
                                 <input type='password' id="inputPassword" class="form-control" placeholder="Password" name="password" value={password} onChange={e => onChange(e)} required />
-                                <label for="inputPassword">Password</label>
+                                <label htmlFor="inputPassword">Password</label>
                             </div>
                             <div className="form-label-group">
                                 <input type='password' id="inputConfirmPassword" class="form-control" placeholder="Confirm Password" name="confirm_password" value={confirm_password} onChange={e => onChange(e)} required />
-                                <label for="inputConfirmPassword">Confirm Password</label>
+                                <label htmlFor="inputConfirmPassword">Confirm Password</label>
                             </div>
                             <input type="submit" className="btn btn-lg btn-primary btn-block text-uppercase" value="Register" />
                         </form>
