@@ -53,17 +53,27 @@ const MainSearch = ({ isAuthenticated }) => {
             console.log(err);
         })
     }
+    
+    var tempKey = 0;
 
     const resultCards = values.listings.map(function(listing){
+
+        const listingLink = "/listing/" + listing.car.vin;
+        tempKey = tempKey + 1;
+
         return (
-            <div className="card search-result-card">
-                <img src="https://sc-listingphotos.s3.amazonaws.com/test_images/car_hero.jpg" className="card-img-top" alt="..." />
-                <div className="card-body">
-                    <p className="card-text">{listing.description}</p>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">22 views</small>
-                </div>
+            <div className="card search-result-card" key={ tempKey }>
+                <Link to={listingLink} >
+                    <img src="https://sc-listingphotos.s3.amazonaws.com/test_images/car_hero.jpg" className="card-img-top" alt="..." />
+                    <h3 className="card-title text-center"><strong>{listing.car.make} {listing.car.model}</strong></h3>
+                    <div className="card-body">
+                        <p className="card-text">{listing.description}</p>
+                    </div>
+                    <div className="card-footer">
+                        <small className="text-muted">{listing.views ? listing.views : 0} views</small>
+                    </div>
+                    <div className="card-badge">{listing.car.year}</div>
+                </Link>
             </div>
         )
     })

@@ -4,7 +4,9 @@ const bcrypt = require('bcryptjs');
 const Listing = require('../../models/Listing.model');
 
 
-  
+// @route         POST api/listings/create
+// @description   Create New Listing
+// @access        public
 router.route('/create').post((req, res) => {
     const user = req.body.car.user;
     const make = req.body.car.make;
@@ -77,5 +79,25 @@ router.route('/create').post((req, res) => {
         .then(() => res.json('Car Created!'))
         .catch(err => res.status(400).json('Error: ' + err));
 });
+
+
+
+
+// @route         GET api/listings/:VIN
+// @description   Get Listing
+// @access        public
+router.route('/:vin').get( async (req, res) => {
+
+    try {
+        const listing = await (Listing.findOne({ "car.vin": req.params.vin }));
+        res.json(listing);
+
+    } catch (error) {
+        console.log(error);
+        res.status(401).send("No Listing Found.");
+    }
+
+});
+
 
 module.exports = router;

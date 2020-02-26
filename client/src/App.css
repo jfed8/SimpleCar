@@ -226,6 +226,7 @@ button {
 .search-result-card {
   width: 17rem;
   display: inline-block;
+  margin: 20px;
 }
 
 footer {
@@ -341,6 +342,17 @@ footer {
 :root {
   --input-padding-x: 1.5rem;
   --input-padding-y: .75rem;
+}
+
+.card-badge {
+  position:absolute;
+  font-size: 150%;
+  top:-15px;
+  left:-15px;
+  padding:5px;
+  border-radius: 8px;
+  background:blue;
+  color:white;
 }
 
 

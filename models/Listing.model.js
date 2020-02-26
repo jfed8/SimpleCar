@@ -19,7 +19,7 @@ const CarSchema = new mongoose.Schema({
     engine_size: Number,
     fuel: String,
     bhp: Number,
-    vin: String,
+    vin: { type: String, unique: true },
     exterior_color: String,
     interior_color: String,
     interior_type: String,

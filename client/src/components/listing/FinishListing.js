@@ -14,13 +14,13 @@ const FinishListing = (props) => {
     }
 
     return (
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-10 col-md-8 col-lg-7 mx-auto">
-                    <div class="card card-signin my-5">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Finish Listing</h5>
-                        <hr class="my-4" />
+        <div className="container">
+            <div className="row">
+                <div className="col-sm-10 col-md-8 col-lg-7 mx-auto">
+                    <div className="card card-signin my-5">
+                    <div className="card-body">
+                        <h5 className="card-title text-center">Finish Listing</h5>
+                        <hr className="my-4" />
                         <form className="form-signin" onSubmit={e => finishListing(e)}>
                             <div className="form-label-group">
                                 <input type="text" id="inputPrice" className="form-control" placeholder="$$$" name="price" onChange={e => onChange(e)} defaultValue={listingValues.price} required />

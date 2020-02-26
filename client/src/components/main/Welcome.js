@@ -12,12 +12,12 @@ const Welcome = ({ isAuthenticated }) => {
     }
 
     return (
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-                    <Link to="/newlisting" class="btn btn-lg btn-primary form-style-btn btn-block text-uppercase">List a Car</Link>
+        <div className="container">
+            <div className="row">
+                <div className="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                    <Link to="/newlisting" className="btn btn-lg btn-primary form-style-btn btn-block text-uppercase">List a Car</Link>
                     <br />
-                    <Link to="/search" class="btn btn-lg btn-primary form-style-btn btn-block text-uppercase">Buy a Car</Link>
+                    <Link to="/search" className="btn btn-lg btn-primary form-style-btn btn-block text-uppercase">Buy a Car</Link>
                 </div>
             </div>
         </div>

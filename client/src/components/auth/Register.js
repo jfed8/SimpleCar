@@ -39,36 +39,36 @@ const Register = ({ register, isAuthenticated }) => {
     }
 
     return (
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-                    <div class="card card-signin my-5">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Register New Account</h5>
-                        <form class="form-signin" onSubmit={e => onSubmit(e)}>
+        <div className="container">
+            <div className="row">
+                <div className="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                    <div className="card card-signin my-5">
+                    <div className="card-body">
+                        <h5 className="card-title text-center">Register New Account</h5>
+                        <form className="form-signin" onSubmit={e => onSubmit(e)}>
                             <div className="form-label-group">
-                                <input type='text' id="inputFirstName" class="form-control" placeholder="First Name" name="first_name" value={first_name} onChange={e => onChange(e)} required />
+                                <input type='text' id="inputFirstName" className="form-control" placeholder="First Name" name="first_name" value={first_name} onChange={e => onChange(e)} required />
                                 <label htmlFor="inputFirstName">First Name</label>
                             </div>
                             <div className="form-label-group">
-                                <input type='text' id="inputLastName" class="form-control" placeholder="Last Name" name="last_name" value={last_name} onChange={e => onChange(e)} required />
+                                <input type='text' id="inputLastName" className="form-control" placeholder="Last Name" name="last_name" value={last_name} onChange={e => onChange(e)} required />
                                 <label htmlFor="inputLastName">Last Name</label>
                             </div>
                             <div className="form-label-group">
-                                <input type='email' id="inputEmail" class="form-control" placeholder="Email" name="email" value={email} onChange={e => onChange(e)} required />
+                                <input type='email' id="inputEmail" className="form-control" placeholder="Email" name="email" value={email} onChange={e => onChange(e)} required />
                                 <label htmlFor="inputEmail">Email address</label>
                             </div>
                             <div className="form-label-group">
-                                <input type='password' id="inputPassword" class="form-control" placeholder="Password" name="password" value={password} onChange={e => onChange(e)} required />
+                                <input type='password' id="inputPassword" className="form-control" placeholder="Password" name="password" value={password} onChange={e => onChange(e)} required />
                                 <label htmlFor="inputPassword">Password</label>
                             </div>
                             <div className="form-label-group">
-                                <input type='password' id="inputConfirmPassword" class="form-control" placeholder="Confirm Password" name="confirm_password" value={confirm_password} onChange={e => onChange(e)} required />
+                                <input type='password' id="inputConfirmPassword" className="form-control" placeholder="Confirm Password" name="confirm_password" value={confirm_password} onChange={e => onChange(e)} required />
                                 <label htmlFor="inputConfirmPassword">Confirm Password</label>
                             </div>
                             <input type="submit" className="btn btn-lg btn-primary btn-block text-uppercase" value="Register" />
                         </form>
-                        <hr class="my-4" />
+                        <hr className="my-4" />
                         <p className="m">
                             Already have an account? <Link to="/login">Log In</Link>
                         </p>

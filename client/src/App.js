@@ -12,6 +12,7 @@ import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Welcome from './components/main/Welcome';
 import NewListing from './components/listing/NewListing';
+import Listing from './components/listing/Listing';
 
 
 import setAuthToken from './helpers/setAuthToken';
@@ -42,6 +43,7 @@ const App = () => {
                         <Route exact path='/login' component={ Login } />
                         <Route exact path='/welcome' component={ Welcome } />
                         <Route exact path='/newlisting' component={ NewListing } />
+                        <Route exact path='/listing/:vin' component={ Listing } />
                         <Route exact path='/search' component={ MainSearch } />
                     </Switch>
                 </section>

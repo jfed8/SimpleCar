@@ -29,14 +29,14 @@ const AddPhotos = (props) => {
     }
 
     return (
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-10 col-md-8 col-lg-7 mx-auto">
-                    <div class="card card-signin my-5">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Add Photos</h5>
+        <div className="container">
+            <div className="row">
+                <div className="col-sm-10 col-md-8 col-lg-7 mx-auto">
+                    <div className="card card-signin my-5">
+                    <div className="card-body">
+                        <h5 className="card-title text-center">Add Photos</h5>
                         <input type="file" />
-                        <hr class="my-4" />
+                        <hr className="my-4" />
                         <button className="btn form-style-btn btn-lg btn-primary btn-block text-uppercase" type="submit" onClick={upload}>Done!</button>
                     </div>
                     </div>

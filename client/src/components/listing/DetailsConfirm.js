@@ -14,7 +14,7 @@ const DetailsEdit = (props) => {
                     <div className="card-body">
                         <h5 className="card-title text-center"><strong>{values.year} {values.make} {values.model}</strong></h5>
                         
-                        <table class="table table-striped">
+                        <table className="table table-striped">
                         <tbody>
                             <tr>
                             <th scope="row">Trim</th>

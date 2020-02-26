@@ -48,6 +48,7 @@ const NewListing = ({ auth: { isAuthenticated, loading, user } }, props) => {
         user: user ? user._id : '',
         photos: [],
         price: 0,
+        views: 0,
         description: ''
     });
 
@@ -179,6 +180,7 @@ const NewListing = ({ auth: { isAuthenticated, loading, user } }, props) => {
         const { 
             user,
             price,
+            views,
             description
         } = listingValues;
 
@@ -188,6 +190,7 @@ const NewListing = ({ auth: { isAuthenticated, loading, user } }, props) => {
         const body = JSON.stringify({ 
             user,
             price,
+            views,
             description,
             car: {
                 vin,
